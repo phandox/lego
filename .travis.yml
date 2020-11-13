@@ -16,7 +16,7 @@ jobs:
     - go: 1.15.x
       env: STABLE=true
 
-go_import_path: github.com/go-acme/lego
+go_import_path: github.com/phandox/lego
 
 env:
   global:
