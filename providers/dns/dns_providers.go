@@ -2,6 +2,7 @@ package dns
 
 import (
 	"fmt"
+	"github.com/go-acme/lego/v4/providers/dns/active24"
 
 	"github.com/go-acme/lego/v4/challenge"
 	"github.com/go-acme/lego/v4/challenge/dns01"
@@ -90,6 +91,8 @@ func NewDNSChallengeProviderByName(name string) (challenge.Provider, error) {
 	switch name {
 	case "acme-dns":
 		return acmedns.NewDNSProvider()
+	case "active24":
+		return active24.NewDNSProvider()
 	case "alidns":
 		return alidns.NewDNSProvider()
 	case "arvancloud":
